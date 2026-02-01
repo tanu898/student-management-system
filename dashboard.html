@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dashboard</title>
-<link rel="stylesheet" href="css/style.css">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h2>Dashboard</h2>
+<h2>Student Management System</h2>
 
-<ul>
-  <li><a href="add-student.html">Add Student</a></li>
-  <li><a href="view-students.html">View Students</a></li>
-  <li><a href="index.html" onclick="logout()">Logout</a></li>
-</ul>
+<!-- THEME BUTTONS -->
+<button onclick="setDark()"> Dark Mode</button>
+<button onclick="setLight()"> Light Mode</button>
 
+<button onclick="logout()">Logout</button>
+
+<br><br>
+
+<a href="add-student.html">Add Student</a> |
+<a href="view-students.html"> View Students</a>
+
+<!-- SCRIPTS AT END -->
+<script src="js/theme.js"></script>
 <script src="js/auth.js"></script>
+
 </body>
 </html>
