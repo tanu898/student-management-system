@@ -1,11 +1,14 @@
 let students = JSON.parse(localStorage.getItem("students")) || [];
 
-/* ADD STUDENT */
 function addStudent() {
-  let h = +hindi.value;
-  let e = +english.value;
-  let m = +maths.value;
-  let s = +science.value;
+  let rollVal = document.getElementById("roll").value;
+  let nameVal = document.getElementById("studentName").value;
+  let emailVal = document.getElementById("studentEmail").value;
+
+  let h = +document.getElementById("hindi").value;
+  let e = +document.getElementById("english").value;
+  let m = +document.getElementById("maths").value;
+  let s = +document.getElementById("science").value;
 
   let percent = (h + e + m + s) / 4;
 
@@ -14,23 +17,27 @@ function addStudent() {
     percent >= 75 ? "B" :
     percent >= 50 ? "C" : "Fail";
 
+  let students = JSON.parse(localStorage.getItem("students")) || [];
+
   students.push({
-    roll: roll.value,
-    name: name.value,
-    email: email.value,
+    roll: rollVal,
+    name: nameVal,
+    email: emailVal,
     hindi: h,
     english: e,
     maths: m,
     science: s,
     percent: percent.toFixed(2),
-    grade
+    grade: grade
   });
 
   localStorage.setItem("students", JSON.stringify(students));
+
+  // auto redirect
   window.location.href = "view-students.html";
 }
 
-/* DISPLAY STUDENTS */
+
 function displayStudents(list = students) {
   let tbody = document.getElementById("tableBody");
   if (!tbody) return;
@@ -53,16 +60,13 @@ function displayStudents(list = students) {
   });
 }
 
-/* SEARCH */
 function searchStudent() {
   let value = search.value.toLowerCase();
   let filtered = students.filter(s =>
-    s.name.toLowerCase().includes(value) ||
-    s.roll.includes(value)
+    s.name.toLowerCase().includes(value) || s.roll.includes(value)
   );
   displayStudents(filtered);
 }
 
-
-/* AUTO LOAD */
+// Auto load students on view page
 displayStudents();
