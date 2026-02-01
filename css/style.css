@@ -1,26 +1,33 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  font-family: Arial;
   padding: 20px;
-  background: #f2f2f2;
 }
 
 input, button {
   padding: 8px;
-  margin: 5px;
+}
+
+.row-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 table {
-  margin: auto;
-  background: white;
-  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
 }
 
-th, td {
-  padding: 8px;
-  border: 1px solid #000;
+/* DARK MODE */
+.dark {
+  background: #121212;
+  color: white;
 }
 
-button {
-  cursor: pointer;
+.dark input,
+.dark button {
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #555;
 }
