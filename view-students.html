@@ -8,13 +8,24 @@
 
 <h2>Students List</h2>
 
-<table border="1" width="100%">
+<!-- THEME BUTTONS -->
+<button onclick="setDark()">Dark Mode</button>
+<button onclick="setLight()">Light Mode</button>
+
+<br><br>
+
+<input id="search" placeholder="Search Roll / Name" onkeyup="searchStudent()">
+
+<table border="1">
   <thead>
     <tr>
       <th>Roll</th>
       <th>Name</th>
-      <th>Subjects</th>
-      <th>Total</th>
+      <th>Email</th>
+      <th>Hindi</th>
+      <th>English</th>
+      <th>Maths</th>
+      <th>Science</th>
       <th>Percentage</th>
       <th>Grade</th>
     </tr>
@@ -22,8 +33,9 @@
   <tbody id="tableBody"></tbody>
 </table>
 
-<p><a href="dashboard.html">Back</a></p>
-
+<!-- SCRIPTS AT END -->
 <script src="js/students.js"></script>
+<script src="js/theme.js"></script>
+
 </body>
 </html>
