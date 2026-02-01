@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Student</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Add Student</h2>
+
+<input id="roll" placeholder="Roll No"><br><br>
+<input id="name" placeholder="Student Name"><br><br>
+
+<h3>Subjects Marks</h3>
+<input type="number" id="hindi" placeholder="Hindi Marks"><br><br>
+<input type="number" id="english" placeholder="English Marks"><br><br>
+<input type="number" id="maths" placeholder="Maths Marks"><br><br>
+<input type="number" id="science" placeholder="Science Marks"><br><br>
+
+<button onclick="addStudent()">Add Student</button>
+
+<hr>
+
+<h3>Student List</h3>
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>Roll</th>
+      <th>Name</th>
+      <th>Subjects</th>
+      <th>Total</th>
+      <th>Percentage</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+<script src="js/students.js"></script>
+</body>
+</html>
